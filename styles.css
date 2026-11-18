@@ -80,15 +80,12 @@ h1, h2, h3 { font-family: 'SG'; font-weight: 700; letter-spacing: -0.03em; line-
 .hero .actions { margin-top: 36px; display: flex; flex-direction: column; align-items: center; gap: 14px; }
 .hero .note { font-size: 14px; color: var(--muted); }
 
-/* CSS phone (same look as the store screenshots) */
+/* Real iPhone 18 Pro: the screen is pre-composited into Apple's bezel (img/device-*.webp). */
 .phone {
-  position: relative; width: 300px; aspect-ratio: 900 / 1956; border-radius: 50px;
-  background: linear-gradient(135deg, #5A5F68 0%, #2A2D33 30%, #1A1C20 60%, #44484F 100%);
-  box-shadow: 0 50px 100px rgba(0, 0, 0, .6), inset 0 0 0 1.5px rgba(255, 255, 255, .18);
-  padding: 8px; flex: none;
+  position: relative; width: 300px; aspect-ratio: 1350 / 2760; flex: none;
+  filter: drop-shadow(0 40px 60px rgba(0, 0, 0, .55));
 }
-.phone img { width: 100%; height: 100%; object-fit: cover; border-radius: 43px; background: #000; }
-.phone::after { content: ''; position: absolute; top: 18px; left: 50%; width: 84px; height: 25px; margin-left: -42px; border-radius: 14px; background: #000; }
+.phone img { width: 100%; height: 100%; object-fit: contain; display: block; }
 .showcase {
   position: relative; margin: 64px auto 0; height: 740px; max-width: 980px;
   perspective: 1800px; display: flex; justify-content: center; align-items: flex-start;
