@@ -41,7 +41,7 @@ a { color: inherit; }
   border-bottom: 1px solid var(--border);
 }
 .nav .wrap { display: flex; align-items: center; gap: 28px; height: 68px; }
-.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-family: 'SG'; font-weight: 700; font-size: 20px; letter-spacing: -0.01em; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-family: 'SG', 'In', -apple-system, sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.01em; }
 .brand img { width: 36px; height: 36px; border-radius: 9px; }
 .nav-links { display: flex; gap: 24px; margin-left: auto; }
 .nav-links a { text-decoration: none; color: var(--muted); font-size: 15px; }
@@ -72,8 +72,8 @@ a { color: inherit; }
     radial-gradient(600px 420px at 50% 72%, rgba(255, 122, 26, .30), transparent 70%),
     radial-gradient(520px 380px at 18% 30%, rgba(61, 123, 217, .16), transparent 70%);
 }
-.eyebrow { font-family: 'SG'; font-weight: 500; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: var(--accent-2); }
-h1, h2, h3 { font-family: 'SG'; font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; }
+.eyebrow { font-family: 'SG', 'In', -apple-system, sans-serif; font-weight: 500; font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: var(--accent-2); }
+h1, h2, h3 { font-family: 'SG', 'In', -apple-system, sans-serif; font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; }
 .hero h1 { font-size: clamp(44px, 8vw, 88px); margin: 18px auto 0; max-width: 900px; }
 .hero h1 em, h2 em { font-style: normal; color: var(--accent); }
 .hero .lead { font-size: clamp(18px, 2.2vw, 22px); color: var(--muted); max-width: 640px; margin: 24px auto 0; }
@@ -100,7 +100,7 @@ h1, h2, h3 { font-family: 'SG'; font-weight: 700; letter-spacing: -0.03em; line-
   box-shadow: 0 30px 60px rgba(0, 0, 0, .55); backdrop-filter: blur(12px);
   animation: bob 6s ease-in-out infinite;
 }
-.float .icon { width: 42px; height: 42px; border-radius: 11px; background: linear-gradient(145deg, var(--accent-2), var(--accent)); display: grid; place-items: center; font-family: 'SG'; font-weight: 700; color: #0B0D10; flex: none; }
+.float .icon { width: 42px; height: 42px; border-radius: 11px; background: linear-gradient(145deg, var(--accent-2), var(--accent)); display: grid; place-items: center; font-family: 'SG', 'In', -apple-system, sans-serif; font-weight: 700; color: #0B0D10; flex: none; }
 .float b { display: block; font-size: 15px; }
 .float span { font-size: 13px; color: var(--muted); }
 .float.n1 { top: 40px; left: 50%; margin-left: -420px; }
@@ -134,7 +134,7 @@ h1, h2, h3 { font-family: 'SG'; font-weight: 700; letter-spacing: -0.03em; line-
 .plan { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 30px; }
 .plan.best { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent), 0 30px 80px rgba(255, 122, 26, .12); }
 .plan h3 { font-size: 24px; }
-.plan .price { font-family: 'SG'; font-weight: 700; font-size: 40px; margin: 14px 0 4px; letter-spacing: -0.02em; }
+.plan .price { font-family: 'SG', 'In', -apple-system, sans-serif; font-weight: 700; font-size: 40px; margin: 14px 0 4px; letter-spacing: -0.02em; }
 .plan .price small { font-size: 16px; color: var(--muted); font-family: 'In'; font-weight: 400; letter-spacing: 0; }
 .plan ul { margin-top: 18px; display: grid; gap: 10px; }
 .plan li { list-style: none; color: var(--muted); font-size: 15px; padding-left: 26px; position: relative; }
@@ -158,6 +158,8 @@ h1, h2, h3 { font-family: 'SG'; font-weight: 700; letter-spacing: -0.03em; line-
 footer { border-top: 1px solid var(--border); padding: 40px 0 56px; color: var(--muted); font-size: 14px; }
 footer .wrap { display: flex; flex-wrap: wrap; gap: 20px 40px; justify-content: space-between; align-items: center; }
 footer nav { display: flex; gap: 22px; flex-wrap: wrap; }
+footer .langs { gap: 14px; font-size: 13px; }
+footer .langs span { color: var(--text); font-weight: 600; }
 footer a { text-decoration: none; }
 footer a:hover { color: var(--text); }
 

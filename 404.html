@@ -21,11 +21,11 @@
 </main>
 <main id="invite" class="invite" hidden>
   <img class="icon" src="/img/icon-256.png" alt="">
-  <h1>Zaproszenie do wspólnego garażu</h1>
-  <p>Ktoś zaprasza Cię do swojego garażu w Autario: wspólne auta, terminy OC i przeglądu oraz wydatki.</p>
+  <h1 id="t-title">Zaproszenie do wspólnego garażu</h1>
+  <p id="t-body">Ktoś zaprasza Cię do swojego garażu w Autario: wspólne auta, terminy OC i przeglądu oraz wydatki.</p>
   <a id="open" class="open" href="#">Otwórz w Autario</a>
   <a id="store" href="https://apps.apple.com/pl/app/autario/id6834331896"><img class="store" src="/img/app-store-badge.svg" alt="Pobierz w App Store" onerror="this.replaceWith(document.createTextNode('Pobierz z App Store'))"></a>
-  <p class="hint">Nie masz jeszcze aplikacji? Pobierz ją, a potem otwórz ten link jeszcze raz.</p>
+  <p class="hint" id="t-hint">Nie masz jeszcze aplikacji? Pobierz ją, a potem otwórz ten link jeszcze raz.</p>
 </main>
 <script>
   (function () {
@@ -36,6 +36,23 @@
     document.getElementById('notfound').hidden = true;
     document.getElementById('invite').hidden = false;
     document.getElementById('open').href = 'garazownik://invite/' + token;
+    var T = {
+      en: ['Invitation to a shared garage', 'Someone is inviting you to their garage in Autario: shared cars, insurance and inspection deadlines, and expenses.', 'Open in Autario', "Don't have the app yet? Get it, then open this link again.", 'Invitation to a garage – Autario', 'us'],
+      de: ['Einladung in eine gemeinsame Garage', 'Jemand lädt dich in seine Garage in Autario ein: gemeinsame Autos, Termine für HU und Versicherung sowie Ausgaben.', 'In Autario öffnen', 'Noch keine App? Lade sie und öffne diesen Link danach noch einmal.', 'Einladung in eine Garage – Autario', 'de'],
+      es: ['Invitación a un garaje compartido', 'Alguien te invita a su garaje en Autario: coches compartidos, plazos de ITV y seguro, y gastos.', 'Abrir en Autario', '¿Aún no tienes la app? Descárgala y vuelve a abrir este enlace.', 'Invitación a un garaje – Autario', 'es'],
+      uk: ['Запрошення до спільного гаража', 'Вас запрошують до гаража в Autario: спільні авто, терміни страховки й техогляду та витрати.', 'Відкрити в Autario', 'Ще немає застосунку? Завантажте його й відкрийте це посилання ще раз.', 'Запрошення до гаража – Autario', 'ua'],
+    };
+    var lang = (navigator.language || 'pl').slice(0, 2).toLowerCase();
+    var t = T[lang] || (lang === 'pl' ? null : T.en);
+    if (t) {
+      document.documentElement.lang = lang in T ? lang : 'en';
+      document.getElementById('t-title').textContent = t[0];
+      document.getElementById('t-body').textContent = t[1];
+      document.getElementById('open').textContent = t[2];
+      document.getElementById('t-hint').textContent = t[3];
+      document.title = t[4];
+      document.getElementById('store').href = 'https://apps.apple.com/' + t[5] + '/app/autario/id6834331896';
+    }
   })();
 </script>
 </body></html>

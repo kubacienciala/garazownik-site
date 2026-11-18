@@ -4,4 +4,11 @@
   <url><loc>https://autario.app/pomoc/</loc><priority>0.6</priority></url>
   <url><loc>https://autario.app/polityka-prywatnosci/</loc><priority>0.3</priority></url>
   <url><loc>https://autario.app/regulamin/</loc><priority>0.3</priority></url>
+  <url><loc>https://autario.app/en/</loc><priority>0.9</priority></url>
+  <url><loc>https://autario.app/de/</loc><priority>0.9</priority></url>
+  <url><loc>https://autario.app/es/</loc><priority>0.9</priority></url>
+  <url><loc>https://autario.app/uk/</loc><priority>0.9</priority></url>
+  <url><loc>https://autario.app/en/help/</loc><priority>0.5</priority></url>
+  <url><loc>https://autario.app/en/privacy/</loc><priority>0.3</priority></url>
+  <url><loc>https://autario.app/en/terms/</loc><priority>0.3</priority></url>
 </urlset>
