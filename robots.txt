@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://garazownik.app/sitemap.xml
+Sitemap: https://autario.app/sitemap.xml
