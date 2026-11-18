@@ -2,7 +2,7 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["496423XSYY.com.kubacienciala.garazownik"],
+        "appIDs": ["56275CMVJ2.com.kubacienciala.garazownik"],
         "components": [{ "/": "/i/*", "comment": "Shared-garage invitations open the app" }]
       }
     ]
