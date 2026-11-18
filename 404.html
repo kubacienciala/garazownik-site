@@ -1,4 +1,41 @@
 <!doctype html>
 <html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nie znaleziono – Autario</title><link rel="icon" href="/img/favicon-64.png"><link rel="stylesheet" href="/styles.css"></head>
-<body><main class="doc" style="text-align:center"><h1>Tu nic nie ma</h1><p class="updated">Ta strona nie istnieje.</p><p><a href="/">Wróć na stronę główną</a></p></main></body></html>
+<title>Autario</title><link rel="icon" href="/img/favicon-64.png"><link rel="stylesheet" href="/styles.css">
+<meta name="apple-itunes-app" content="app-id=6834331896">
+<style>
+  .invite { max-width: 460px; margin: 12vh auto 0; padding: 0 20px; text-align: center; }
+  .invite img.icon { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 18px 40px rgba(255, 106, 0, .35); }
+  .invite h1 { font-size: clamp(30px, 6vw, 40px); margin: 22px 0 10px; }
+  .invite p { color: var(--muted); font-size: 17px; }
+  .invite .open { display: inline-block; margin-top: 26px; padding: 15px 28px; border-radius: 999px; font-weight: 700;
+    color: #0b0d10; background: linear-gradient(#ff9a4d, #f06000); box-shadow: 0 10px 26px rgba(255, 106, 0, .4); text-decoration: none; }
+  .invite .store { display: block; margin: 22px auto 0; width: 170px; }
+  .invite .hint { font-size: 14px; margin-top: 18px; }
+</style></head>
+<body>
+<!-- Not found page. GitHub Pages serves it for /i/<token> too: that path is a shared-garage
+     invitation (Universal Link, IL1). With the app installed iOS opens the app directly and this
+     page is never shown; otherwise it offers "open" and the App Store. -->
+<main id="notfound" class="doc" style="text-align:center">
+  <h1>Tu nic nie ma</h1><p class="updated">Ta strona nie istnieje.</p><p><a href="/">Wróć na stronę główną</a></p>
+</main>
+<main id="invite" class="invite" hidden>
+  <img class="icon" src="/img/icon-256.png" alt="">
+  <h1>Zaproszenie do wspólnego garażu</h1>
+  <p>Ktoś zaprasza Cię do swojego garażu w Autario: wspólne auta, terminy OC i przeglądu oraz wydatki.</p>
+  <a id="open" class="open" href="#">Otwórz w Autario</a>
+  <a id="store" href="https://apps.apple.com/pl/app/autario/id6834331896"><img class="store" src="/img/app-store-badge.svg" alt="Pobierz w App Store" onerror="this.replaceWith(document.createTextNode('Pobierz z App Store'))"></a>
+  <p class="hint">Nie masz jeszcze aplikacji? Pobierz ją, a potem otwórz ten link jeszcze raz.</p>
+</main>
+<script>
+  (function () {
+    var m = location.pathname.match(/^\/i\/([A-Za-z0-9_-]{16,128})\/?$/);
+    if (!m) return;
+    var token = m[1];
+    document.title = 'Zaproszenie do garażu – Autario';
+    document.getElementById('notfound').hidden = true;
+    document.getElementById('invite').hidden = false;
+    document.getElementById('open').href = 'garazownik://invite/' + token;
+  })();
+</script>
+</body></html>
